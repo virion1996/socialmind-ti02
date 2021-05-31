@@ -73,7 +73,10 @@
             </div>
             <div class="form-group">
                 <label for="senha" class="text-info">Senha</label><br>
-                <input type="password" name="txt_senha" id="txt_senha" class="form-control">
+                <input type="password" name="txt_senha" id="txt_senha" class="form-control" onkeyup="ValidarSenhaForca()">
+                <div id="impSenha"></div>
+        		<div id="impForcaSenha"></div>
+       			<div id="erroForca"></div>
             </div>
             <div class="form-group">
                 <label for="senha2" class="text-info">Confirmação de Senha</label><br>
@@ -92,6 +95,7 @@
     </div>
 
     <script src="../scripts/cadastro_psicologos.js"></script>
+    <script src="../scripts/senhaForca.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>

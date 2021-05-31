@@ -24,6 +24,7 @@ public class PsicologoService {
     }
     
     public Object logarPsicologo(Request request, Response response) {
+
     	String certo = "<script>window.location.href = \"http://127.0.0.1:5501/html/Dash_psicologo.html\"</script>";
     	String erro = "<script>window.location.href = \"http://127.0.0.1:5500/template/index.html\"</script>";
     	
@@ -34,6 +35,8 @@ public class PsicologoService {
     	boolean senhacerta = PsicologoDAO.senhacerta(senha);
     	
     	if(emailcerto && senhacerta) {
+            int id_logado = PsicologoDAO.idLogado(email, senha);
+            PsicologoDAO.setId_logado(id_logado);
     		response.status(201);
     		return certo;
     	} 

@@ -55,13 +55,13 @@ public class AnotacaoDAO {
         return status;
     }
 
-    public boolean inserirAnotacao(Anotacao Anotacao) {
+    public boolean inserirAnotacao(Anotacao Anotacao, int id_logado) {
         boolean status = false;
 
         try {
             Statement st = conexao.createStatement();
-            st.executeUpdate("INSERT INTO anotacoes (nome, motivo, criacao, obs, data_consulta)" + "VALUES ("
-                    + Anotacao.getNome_anotacao() + "', '" + Anotacao.getMotivo() + "', '" + Anotacao.getCriacao()
+            st.executeUpdate("INSERT INTO anotacoes (psicologo_id, nome, motivo, criacao, obs, data_consulta)" + "VALUES ("
+                    + id_logado + "', '" + Anotacao.getNome_anotacao() + "', '" + Anotacao.getMotivo() + "', '" + Anotacao.getCriacao()
                     + "', '" + Anotacao.getObs() + "', '" + Anotacao.getDataConsulta() + "');");
             st.close();
             status = true;

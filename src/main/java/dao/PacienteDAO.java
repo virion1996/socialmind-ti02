@@ -111,10 +111,6 @@ public class PacienteDAO {
 			st.close();
 			status = true;
 
-			// Somar mais um ao maxID
-			this.maxId = maxId + 1;
-			Paciente.setId(maxId + 1);
-
 			System.out.println("Insercao do paciente com id [" + Paciente.getId() + "] efetuada com sucesso.");
 
 		} catch (SQLException u) {

@@ -6,6 +6,7 @@ import model.Psicologo;
 public class PsicologoDAO {
     private Connection conexao;
     private int maxId;
+    private int id_logado;
 
     public PsicologoDAO() {
         conexao = null;
@@ -14,6 +15,9 @@ public class PsicologoDAO {
     public int getMaxCodigo() {
         return this.maxId;
     }
+
+    public int getId_logado() { return this.id_logado;}
+    public void setId_logado(int value) {this.id_logado = value;}
 
     public boolean conectar() {
         String driverName = "org.postgresql.Driver";
@@ -49,6 +53,25 @@ public class PsicologoDAO {
             System.err.println(e.getMessage());
         }
         return status;
+    }
+
+    public int idLogado(String email, String senha) {
+    	int id = -1;
+    	
+    	try {
+    		Statement st = conexao.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+            ResultSet rs = st.executeQuery("SELECT email FROM psicologo WHERE email = '" + email + "' AND senha = '" + senha + "'");
+
+            if (rs.next()) {
+                id = rs.getInt("id");
+            }
+
+            st.close();
+
+        } catch (SQLException u) {
+            throw new RuntimeException(u);
+        }
+    	return id;
     }
     
     public boolean emailcerto(String email) {

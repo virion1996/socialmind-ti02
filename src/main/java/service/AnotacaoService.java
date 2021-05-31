@@ -1,6 +1,7 @@
 package service;
 
 import dao.AnotacaoDAO;
+import dao.PsicologoDAO;
 import model.Anotacao;
 
 import spark.Request;
@@ -11,6 +12,7 @@ import java.text.SimpleDateFormat;
 public class AnotacaoService {
 
     private static AnotacaoDAO AnotacaoDAO;
+    private static PsicologoDAO psicologoDAO;
 
     public AnotacaoService() {
         try {
@@ -31,8 +33,9 @@ public class AnotacaoService {
         Date Criacao = new Date();
 
         Anotacao Anotacao = new Anotacao(Nome_anotacao, Motivo, Criacao, Data_consulta, Obs);
+        int id_logado = psicologoDAO.getId_logado();
 
-        AnotacaoDAO.inserirAnotacao(Anotacao);
+        AnotacaoDAO.inserirAnotacao(Anotacao, id_logado);
 
         response.status(201);
 
