@@ -1,0 +1,286 @@
+<html>
+<head>
+<meta content="text/html; charset = UTF-8" http-equiv="content-type">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<title>Controle de Estoque de Livros</title>
+</head>
+
+<script type="text/javascript">
+
+function addIdToPath(form_name, base_url){
+	event.preventDefault();
+    var your_form = document.getElementById(form_name);
+	var codigo = your_form.elements.namedItem("codigo").value;
+	action_src = base_url + codigo;
+	your_form.action = action_src;
+}
+
+</script>
+
+
+<body>
+	<header>
+		<p>
+			<h1 style="text-align:center">Controle de Estoque de Livros</h1>
+		</p>
+	</header>
+	
+	<section class="section--container__responsive">
+		<section class="section--mainrow__responsive first--section">
+			<h1 class="generaltext">Cadastrar Livro</h1>
+			<form class="form--register" action="http://localhost:6789/Paciente" method="post" id="form-add">
+				<h3 class="text-center text-info">Novo usuário</h3>
+            <div class="form-group">
+                <label for="txt_nome" class="text-info">Nome </label><br>
+                <input type="text" name="txt_nome" id="txt_nome" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="txt_sobrenome" class="text-info">Sobrenome </label><br>
+                <input type="text" name="txt_sobrenome" id="txt_sobrenome" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label class="text-info">Deseja se manter em aninomato ? </label>
+                <select id="select_anonimo" name="select_anonimo" class="form-control">
+                    <option value="" disabled selected>Escolher opção</option>
+                    <option value="1">Sim</option>
+                    <option value="0">Não</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="select_genre" class="text-info">Gênero</label>
+                <select id="select_genre" name="select_genre" class="form-control">
+                    <option value="" disabled selected>Escolher opção</option>
+                    <option value="F">Feminino</option>
+                    <option value="M">Masculino</option>
+                    <option value="O">Outros</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="birth_date" class="text-info">Data de Nascimento</label>
+                <input type="date" id="birth_date" name="user_birth" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="txt_phone" class="text-info"> Celular </label>
+                <input type="text" name="txt_phone" id="txt_phone" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="txt_cep" class="text-info"> CEP </label>
+                <input type="text" name="txt_cep" id="txt_cep" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="txt_cep" class="text-info"> CPF </label>
+                <input type="text" name="txt_cpf" id="txt_cpf" class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="text-info">Escolha uma opção que satisfaz o valor que você poderia pagar
+                    por consulta </label>
+                <select id="select_valor" name="select_valor" class="form-control">
+                    <option value="" disabled selected>Escolher opção</option>
+                    <option value="Gratuito">Gratuito</option>
+                    <option value="Até 50 reais">Até 50 reais</option>
+                    <option value="Até 100 reais">Até 100 reais</option>
+                    <option value="Mais de 100 reais">Mais de 100 reais</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="txt_about" class="text-info">Fale um pouco mais sobre você</label><br>
+                <textarea id="txt_about" name="user_message" rows="10" cols="50" class="form-control"
+                    placeholder="Conte um pouco mais sobre você que pode ser interessante do psicólogo saber. Algumas características, opiniões, preferências, etc."></textarea>
+            </div>
+            <div class="form-group">
+                <label for="txt_email" class="text-info">Email</label><br>
+                <input type="email" name="txt_email" id="txt_email" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="txt_senha" class="text-info">Senha</label><br>
+                <input type="password" name="txt_senha" id="txt_senha" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="txt_senha2" class="text-info">Confirmação de Senha</label><br>
+                <input type="password" name="txt_senha2" id="txt_senha2" class="form-control">
+            </div>
+	
+				<input type="submit" value="cadastrar" class="input--main__style input--button">
+			</form>
+		</section>
+	</section>
+	<section class="section--container__responsive">
+		<section class="section--row__responsive">
+			<h1 class="generaltext">Detalhar livro</h1>
+			<form onsubmit="addIdToPath('form-get', 'http://localhost:6789/Paciente/')" method="get" id="form-get">
+				<input class="input--down" type="text" id="codigo" value="" placeholder="codigo do livro..."> 
+				<input type="submit" value="consultar" class="input--button input--consult__style">
+			</form>
+		</section>
+		
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		
+		<section class="section--row__responsive">
+			<h1 class="generaltext">Remover livro</h1>
+			<form onsubmit="addIdToPath('form-delete', 'http://localhost:6789/Paciente/delete/')" method="get" id="form-delete">
+				<input class="input--down" type="text" id="codigo" value="" placeholder="codigo do livro...">
+				<input type="submit" value="remover" class="input--remove__style input--button">
+			</form>
+		</section>
+		
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<section class="section--row__responsive">
+			<h1 class="generaltext">Listar livros</h1>
+			<form action="http://localhost:6789/Paciente"  method="get" id="form-all">
+			    <br><br><br>
+				<input type="submit" value="todos" class="input--consult__style input--button">
+			</form>
+		</section>
+	</section>
+
+	<section class="section--container__responsive" style="visibility: hidden" id="product-result">
+		<table border="1">
+			<tr>
+				<td>livro codigo:</td>
+				<td><span id="codigo">Sem Resultado</span></td>
+			</tr>
+			<tr>
+				<td>Nome:</td>
+				<td><span id="nome">Sem Resultado</span></td>
+			</tr>
+			<tr>
+				<td>Paginas:</td>
+				<td><span id="paginas">Sem Resultado</span></td>
+			</tr>
+			<tr>
+				<td>Autor:</td>
+				<td><span id="autor">Sem Resultado</span></td>
+			</tr>
+			<tr>
+				<td>Gênero:</td>
+				<td><span id="genero">Sem Resultado</span></td>
+			</tr>
+		</table>
+	</section>
+	
+	<div id="tela"></div>
+
+	<style>
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: rgb(178, 178, 248);
+}
+
+.section--mainrow__responsive {
+	background: white;
+	border-radius: 10px;
+	padding: 20px;
+	margin: auto;
+	margin-bottom: 20px;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.466);
+}
+
+.section--row__responsive {
+	background: white;
+	border-radius: 10px;
+	padding: 20px;
+	width: 250px;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.466);
+}
+
+.generaltext, p {
+	font-family: Arial;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.section--container__responsive {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.input--down {
+	display: block;
+	margin: 0px auto;
+	margin-bottom: 10px;
+}
+
+.input--main__style {
+	background-color: #00FF00;
+	
+}
+
+.input--remove__style {
+	background-color: red;
+}
+
+.input--consult__style {
+	background-color: darkblue;
+}
+
+.input--button {
+	font-weight: bold;
+	font-family: Arial;
+	font-size: medium;
+	border-color: transparent;
+	display: block;
+	margin: 20px auto;
+	margin-bottom: 10px;
+	color: white;
+}
+
+.input--register {
+	display: inline;
+}
+
+.input--radio {
+	display: inline;
+}
+
+input {
+	display: block;
+	border-radius: 7px;
+	padding: 10px;
+	border-style: solid;
+	border-color: lightgray;
+	color: black;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.p--radio__display {
+	display: block;
+}
+
+form p {
+	text-align: initial;
+	display: inline;
+	margin-left: 15px;
+}
+
+.p--nomargin {
+	margin-left: 0px;
+	margin-right: 10px;
+}
+</style>
+
+
+<footer>
+	<h3 style="text-align:center">&copy;Desenvolvido por Daniel Vitor</h3>
+</footer>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+        
+    <script src="teste.js"></script>
+
+</body>
+</html>

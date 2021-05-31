@@ -1,0 +1,490 @@
+/*Sidebar*/
+
+body, img, h1, div, p, section
+{
+    font-family: sans-serif;
+    padding: 0; 
+    margin: 0;
+}
+
+:focus
+{
+    outline: none !important;
+}
+
+a:hover
+{
+    text-decoration: none;
+}
+
+#dash
+{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+#sidebar
+{
+    background-color: #E4E6EC;
+    position: relative;
+    height: 100vh;
+    width: 382px;
+}
+
+#sidebar_userpanel
+{
+    background-color: #EFEFEF;
+    height: 24%;  
+    width: 100%; 
+}
+
+#sidebar_usercontext
+{
+    /* background-color: red; */ /*test*/
+    height: 128px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 28px;
+    padding-right: 20px;
+    top: 45%;
+    transform: translateY(-50%);
+}
+
+#sidebar_photoframe
+{
+    height: 112px;
+    width: 112px;
+    position: relative;
+    border-radius: 100px;
+    background-color: #1986C0;
+}
+
+#sidebar_photoframe>i
+{
+    font-size: 62px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#sidebar_userphoto
+{
+    width:100%;
+    border-radius: 100%;
+    position: relative;
+}
+
+#sidebar_textbox
+{
+    /*background-color: aqua ; /*test*/
+    width: calc(100% - 112px);
+    position: relative;
+    height: 128px;
+    padding-top: 10px;
+    padding-left: 10px;
+    line-height: 1;
+    
+}
+
+#sidebar_username
+{
+    /* background-color: purple; */ /*test*/
+    display: inline-block;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#sidebar_userstatus
+{
+    width: fit-content;
+    position: relative;
+}
+
+#sidebar_statusbar
+{
+    height: 24px;
+    background-color: #cccdd0;
+    border-radius: 22px;
+    
+    display: flex;
+    position: relative;
+    align-items: center;
+    font-size: 1.3rem;
+    padding: 0 8px;
+    width: 160px;
+    color: #464658;
+}
+
+#sidebar_statusicon
+{
+    font-size: 16px;
+    color: rgb(0, 200, 0);
+    position: relative;
+    margin-right: 5px;
+}
+
+#sidebar_statustext
+{
+    font-size: 16px;
+    line-height: 1.6rem;
+    display: inline-block;
+}
+
+#sidebar_selectarrow
+{
+    position: absolute;
+    right: 8px;
+}
+
+#sidebar_statusmenu
+{
+    display: none;
+    width: 100%;
+    margin-top: 8px;
+
+    position: absolute;
+    z-index: 1;
+    padding: 10px;
+
+    border-radius: 12px;
+    color: #464658;
+    background-color: #cccdd0;
+}
+
+#sidebar_statusmenu> ul
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar_statusmenu> ul li:not(:last-child)
+{
+    margin-bottom: 20px;
+}
+
+#sidebar_message
+{
+    /* background-color: green; */ /*test*/
+    max-height: 50%;
+    margin-bottom: 5px;
+    position: absolute;
+    bottom: 0;
+
+    font-size: 16px;
+    text-align: left;
+    word-break: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 1rem;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+#sidebar_line
+{
+    height: 4px;
+    width: 100%;   
+    background-color: #1986C0;
+}
+
+#sidebar_controlbuttons
+{
+    /* background-color: purple; */
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    
+    margin-bottom: 20px;
+    padding-left: 28px;
+    padding-right: 28px;
+}
+
+.sidebar_btn
+{
+    height: 52px;
+    width: 100%;
+    margin-bottom: 16px;
+    border-style: none;
+    border-radius: 16px;
+}
+
+.sidebar_btn> p
+{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+#sidebar_options
+{
+    background-color: #1986C0;
+}
+
+#sidebar_options>i
+{
+    color: white;
+}
+
+#sidebar_options:hover
+{
+    filter: contrast(200%);
+}
+
+#sidebar_logout
+{
+    border-style: solid;
+    border-width: 5px;
+    border-color: #FF6264;
+    background-color: transparent;
+}
+
+#sidebar_logout>i
+{
+    color: #FF6264
+}
+
+#sidebar_logout:hover
+{
+    filter: contrast(200%)
+}
+
+#sidebar_options> p
+{
+    color: white;
+}
+
+#sidebar_logout> p
+{
+    color: #FF6264;
+}
+
+/*end-Sidebar*/
+
+
+/* Small */
+@media screen and (max-width: 767px)
+{
+
+    #sidebar
+    {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        background-color: #E4E6EC;
+
+        height: 92px;
+        width: 100%;
+        bottom: 0;
+
+        padding: 0px 10px;
+        
+    }
+
+    #sidebar_userpanel
+    {
+        height: 100%;
+        width: fit-content;
+
+        padding: 0;
+        margin: 0;
+
+        background-color: transparent; 
+    }
+
+    #sidebar_usercontext
+    {
+        height: fit-content;
+        width: fit-content;
+        margin: 0;
+        padding: 0; 
+
+        display: flex;
+        align-items: center;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+
+        box-sizing: border-box;
+        /* background-color: green; */
+    }
+
+    #sidebar_photoframe
+    {
+        height: calc(80px - 10px);
+        width: calc(80px - 10px);
+        padding: 0;
+        margin: 0;
+    }
+
+    #sidebar_photoframe>i
+    {
+        font-size: 42px;
+    }
+
+    #sidebar_textbox
+    {
+        height: calc(80px - 10px);
+        width: calc(100% - 80px + 10px);
+        position: relative;
+        padding-top: 0;
+        padding-left: 5px;
+        line-height: 1;
+        
+        /* background-color: greenyellow; */
+    }
+
+    #sidebar_userstatus
+    {
+        width: fit-content;
+        position: absolute;
+        bottom: 5px;
+        /* background-color: red; */
+    }
+
+    #sidebar_selectarrow
+    {
+        /* background-color: hotpink; */
+        transform: rotate(180deg)
+    }
+    
+    #sidebar_statusbar
+    {
+        width: fit-content;
+    }
+
+    #sidebar_statusinfo>i
+    {
+        margin-right: 20px;
+    }
+
+    #sidebar_statustext
+    {
+        display: none;
+    }
+
+    #sidebar_message
+    {
+        display: none;
+    }
+
+    #sidebar_statusmenu
+    {
+        display: none;
+        width: 150px;
+        margin-top: 0px;
+        top: -8px;
+
+        position: absolute;
+        padding: 10px;
+
+        border-radius: 12px;
+        color: #464658;
+        background-color: #cccdd0;
+
+        transform: translateY(-100%);
+    }
+
+    #sidebar_statusmenu>ul li
+    {
+        position: relative;
+        /* background-color: red; */
+    }
+
+    #sidebar_statusmenu> ul li:not(:last-child)
+    {
+        margin-bottom: 25px;
+    }
+
+    #sidebar_line
+    {
+        display: none;
+    }
+
+    #sidebar_controlbuttons
+    {
+        display: flex;
+        height: fit-content;
+        width: fit-content;
+
+        position: relative;
+        
+        top: 50%;
+        bottom: unset;
+
+        transform: translateY(-50%);
+        
+        margin-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+       /*  background-color: purple; */
+    }
+
+    .sidebar_btn
+    {
+        height: 50px;
+        width: 50px;
+        padding: 0;
+        margin: 0;
+        border-style: none;
+        border-radius: 12px;
+    }
+
+    #content
+    {
+        position: absolute !important;
+        z-index: 0;
+        display: unset;
+        align-items: center;
+        
+        height: calc(100% - 92px);
+
+        /* background-color: teal; */
+    }
+
+    #content-context
+    {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+
+        /* background-color: yellow; */
+    }
+
+    .menu-btn
+    {
+        height: 120px;
+        width: 120px;
+        background-color: #1986C0;
+        position: relative;
+        border-style: none;
+        border-radius: 12px;
+        margin: 5px;
+        margin-bottom: 25px;
+    }
+
+    .menu-btn>i
+    {
+        font-size: 50px;
+        color: white;
+    }
+
+    .menu-btn>p
+    {   
+        top: 100%;
+        bottom: 0;
+        margin: 5px;
+
+        font-size: 20px;
+        line-height: 1;
+        position: absolute;
+        color: #1986C0;
+    }
+}

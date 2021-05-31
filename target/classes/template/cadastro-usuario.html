@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocialMind</title>
+    <link rel="stylesheet" href="../css/styles-cadastro.css">
+</head>
+
+<body>
+    
+    
+    <nav>
+        <section class="container ">
+            <div class="row ">
+                <nav class="col-12 col-sm-12 col-md-12 col-lg-12">
+                    <h1>Cadastro do Usuário</h1>
+                </nav>
+            </div>
+        </section>
+    </nav>
+    
+
+    <section class="container">
+        <h5>Preencha com os seguintes dados cadastrais:</h5>
+        <form>
+            <div class="form-row">
+                <div class="card col-12">
+                    <div class="card-body">
+                        <div class="usuario col-md-12">
+                            <img src="../imagens/usario2.jpg" class="foto">
+                           <a href="#">Alterar Imagem</a>
+                        </div>
+                        <div class="usuario form-group col-md-12">
+                            <input type="text" class="form-control" id="inputUsuario" placeholder="Crie um nome de usuário">
+                        </div>
+                        <div class="esquerda form-group col-md-6">
+                            <label for="inputCEP">E-mail:</label>
+                            <input type="text" class="form-control" id="inputEmail" placeholder="seuemail@exemplo.com">
+                        </div>
+                        <div class="direita form-group col-md-6">
+                            <label for="inputCEP">Confirme seu E-mail:</label>
+                            <input type="text" class="form-control" id="inputEmail" placeholder="Confirme seu E-mail">
+                        </div>
+                        <div class="esquerda form-group col-md-6">
+                            <label for="inputCEP">Senha</label>
+                            <input type="password" class="form-control" id="inputSenha" placeholder="Crie uma senha">
+                        </div>
+                        <div class="direita form-group col-md-6">
+                            <label for="inputCEP">Confirme sua senha</label>
+                            <input type="password" class="form-control" id="inputSenha" placeholder="Confirme sua senha">
+                        </div>
+                    </div>
+                  </div>
+                <div class="form-group col-md-6">
+                    <label for="inputNome">Nome:</label>
+                    <input type="text" class="form-control" id="inputNome" placeholder="Nome">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputSobrenome">Sobrenome:</label>
+                    <input type="text" class="form-control" id="inputSobrenome" placeholder="Sobrenome">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="date">Data de Nascimento:</label>
+                    <input type="date" class="form-control" id="birth_date" name="user_birth" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputGenero">Gênero:</label>
+                    <select id="inputGenero" class="form-control">
+                        <option selected>Gênero</option>
+                        <option>Masculino</option>
+                        <option>Feminino</option>
+                        <option>Outros</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputCEP">CEP:</label>
+                    <input type="text" class="form-control" id="inputCEP" placeholder="00000-000">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputCelular">Celular:</label>
+                    <input type="text" class="form-control" id="inputCelular" placeholder="(00) 0 00000000">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputAnonimo">Anonimato:</label>
+                    <select id="inputAnonimo" class="form-control">
+                        <option selected>Deseja o anonimato?</option>
+                        <option>Sim</option>
+                        <option>Não</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputMedia">Média do valor que pode pagar:</label>
+                    <select id="inputMedia" class="form-control">
+                      <option selected>Valores</option>
+                      <option>Gratuito</option>
+                      <option>Até 50 reais</option>
+                      <option>Até 100 reais</option>
+                      <option>Mais de 100 reais</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-12">
+                    <label for="inputDescricao">Descrição:</label>
+                    <textarea class="form-control" id="inputDescricao" rows="3"
+                        placeholder="Fale um pouco sobre você"></textarea>
+                </div>
+                
+            </div>
+
+        </form>
+
+    </section>
+
+    <section class="container botoes">
+        <div class="row">
+            <button type="button" class="btn btn-primary">Confirmar</button>
+
+            <button type="button" class="btn btn-outline-danger">Cancelar</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <section class="container">
+          <div class="row footer">
+            <div class="logo-footer col-1 col-sm-1 col-md-3 col-lg-3">
+              <img src="../imagens/logo.png" class="logo">
+            </div>
+            <div class="menu-footer col-7 col-sm-8 col-md-5 col-lg-5">
+              <ul>
+                <li>
+                  <a href="#sobre">Sobre o Site</a>
+                </li>
+                <li>
+                  <a href="#parcerias">Parcerias</a>
+                </li>
+                <li>
+                  <a href="#avaliacoes">Avaliações</a>
+                </li>
+                <li>
+                  <a href="#nos">Sobre Nós</a>
+                </li>
+                <li>
+                  <a href="#contatos">Contatos</a>
+                </li>
+              </ul>
+            </div>
+            <div class="sociais-tudo col-5 col-sm-4 col-md-4 col-lg-4">
+              <h6>Nossas Redes:</h6>
+              <div class="sociais">
+                <div class=" col-4 col-sm-4 col-md-3 col-lg-4">
+                  <img src="../imagens/facebook.png">
+                </div>
+                <div class=" col-4 col-sm-4 col-md-3 col-lg-4">
+                  <img src="../imagens/instagram.png">
+                </div>
+                <div class=" col-4 col-sm-4 col-md-3 col-lg-4">
+                  <img src="../imagens/twitter.png">
+                </div>
+              </div>
+              <h6>Copyright 2020 - Todos Direitos Reservados</h6>
+    
+            </div>
+          </div>
+        </section>
+      </footer>
+
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/aaa853252b.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

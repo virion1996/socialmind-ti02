@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro do paciente</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="modal-body">
+        <div id="login-box" class="col-md-12">
+            <form class="form--register" action="http://localhost:6789/Paciente" method="post" id="form-add">
+            <h3 class="text-center text-info">Novo usuário</h3>
+            <div class="form-group">
+                <label for="txt_nome" class="text-info">Nome </label><br>
+                <input type="text" name="txt_nome" id="txt_nome" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="txt_sobrenome" class="text-info">Sobrenome </label><br>
+                <input type="text" name="txt_sobrenome" id="txt_sobrenome" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label class="text-info">Deseja se manter em aninomato ? </label>
+                <select id="select_anonimo" name="select_anonimo" class="form-control">
+                    <option value="" disabled selected>Escolher opção</option>
+                    <option value="1">Sim</option>
+                    <option value="0">Não</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="select_genre" class="text-info">Gênero</label>
+                <select id="select_genre" name="select_genre" class="form-control">
+                    <option value="" disabled selected>Escolher opção</option>
+                    <option value="F">Feminino</option>
+                    <option value="M">Masculino</option>
+                    <option value="O">Outros</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="birth_date" class="text-info">Data de Nascimento</label>
+                <input type="date" id="birth_date" name="user_birth" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="txt_phone" class="text-info"> Celular </label>
+                <input type="text" name="txt_phone" id="txt_phone" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="txt_cep" class="text-info"> CEP </label>
+                <input type="text" name="txt_cep" id="txt_cep" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="txt_cep" class="text-info"> CPF </label>
+                <input type="text" name="txt_cpf" id="txt_cpf" class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="text-info">Escolha uma opção que satisfaz o valor que você poderia pagar
+                    por consulta </label>
+                <select id="select_valor" name="select_valor" class="form-control">
+                    <option value="" disabled selected>Escolher opção</option>
+                    <option value="Gratuito">Gratuito</option>
+                    <option value="Até 50 reais">Até 50 reais</option>
+                    <option value="Até 100 reais">Até 100 reais</option>
+                    <option value="Mais de 100 reais">Mais de 100 reais</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="txt_about" class="text-info">Fale um pouco mais sobre você</label><br>
+                <textarea id="txt_about" name="user_message" rows="10" cols="50" class="form-control"
+                    placeholder="Conte um pouco mais sobre você que pode ser interessante do psicólogo saber. Algumas características, opiniões, preferências, etc."></textarea>
+            </div>
+            <div class="form-group">
+                <label for="txt_email" class="text-info">Email</label><br>
+                <input type="email" name="txt_email" id="txt_email" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="txt_senha" class="text-info">Senha</label><br>
+                <input type="password" name="txt_senha" id="txt_senha" class="form-control" onkeyup="ValidarSenhaForca()">
+                <div id="impSenha"></div>
+        		<div id="impForcaSenha"></div>
+       			<div id="erroForca"></div>
+            </div>
+            <div class="form-group">
+                <label for="txt_senha2" class="text-info">Confirmação de Senha</label><br>
+                <input type="password" name="txt_senha2" id="txt_senha2" class="form-control">
+            </div>
+            
+            <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <input type="submit" value="cadastrar" class="input--main__style input--button">
+    </div>
+            </form>
+        </div>
+    </div>
+    
+    </div>
+    </div>
+
+    <script src="../scripts/cadastro_paciente.js"></script>
+    <script src="../scripts/senhaForca.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

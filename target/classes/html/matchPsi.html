@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Match</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+ />
+    <meta name="description" content="Projetos do Christian" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../css/match.css" />
+    <meta name="Autor" content="Christian" />
+    <script src="../scripts/matchPsi.js">
+    </script>
+    <script
+      src="https://kit.fontawesome.com/dd6b633eba.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      //------SETA INFORMACOES INICIAIS SOBRE OS PSICOS RECOMENDADOS------
+        onload = () => {
+
+        document.getElementById('usuario').innerText= Usuario();
+        conexoes();
+        document.getElementById(0).innerText = userSolic();
+        document.getElementById(3).innerText = userSobreSolic();
+          
+          conx1.onclick = () =>{
+              IgorTeAmoS2(1);
+              } 
+
+
+          bot1.onclick = ()=>
+          {
+            aceitarCox(0);
+            document.getElementById(0).innerText = "Aguarde para novas solicitações";
+            document.getElementById(3).innerText = "";
+            document.getElementById('bot1').innerHTML = ``;
+            conexoes();
+          }
+        }
+
+    </script>
+
+  </head>
+
+  <body>
+    <header class="container header">  
+    </header>
+
+    <main class="container main">
+
+        <div class="row">
+
+          <div class="card col-sm-12 col-lg-6" style="align-items: center;">
+            <h3 id="usuario">#usuario</h3>
+            <div class="card" style="width: 18rem;">
+              <div class="card-header">
+                Suas conexões
+              </div>
+              <ul class="list-group list-group-flush">
+                <li id="conx1" class="list-group-item">Sem conexão</li>
+                <li id="conx2" class="list-group-item">Sem conexão</li>
+                <li id="conx3" class="list-group-item">Sem conexão</li>
+              </ul>
+            </div>
+            <div class="row">
+              <a id="a_btn_back" href="Dash_psicologo.html"><button type="button" class="btn btn-secondary btn_save" id="btn_back">Retornar</button></a>
+          </div>
+          </div>
+
+          <div class="card col-sm-12 col-lg-6" style="align-items: center;">
+            <h3>Solicitações</h3>
+              <div class="card" style="width: 18rem; display: inline;">
+                <div class="card-body">
+                  <h5 class="card-title" id="0">No momento você não possui solicitações</h5>
+                  <p class="card-text" id="3"></p>
+                  <div id="bot1">
+                  <a id="bt1" class="btn btn-secondary">Aceitar</a>
+                </div>
+                </div>
+              </div>
+
+              
+        </div>
+        
+    </main>
+
+    <footer class="container footer">
+      <p>Copyright 2020- - <b>ICEI PUC Minas</b></p>
+    </footer>
+    
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

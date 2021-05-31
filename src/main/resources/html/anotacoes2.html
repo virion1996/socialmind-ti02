@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anotações</title>
+    <link rel="stylesheet" href="../css/anotacoes2.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Minhas Anotações</h1>
+
+        <div id="formContatos">
+            <form class="form--register" action="http://localhost:6789/Anotacao" method="post" id="form-add">
+                <div class="row">
+                    <div class="col-4">
+                        Nome:
+                        <input type="text" id="campoNome" class="form-control">
+                    </div>
+                    <div class="col-4">
+                        Data de Consulta:
+                        <input type="date" id="campoData" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    Motivos:
+                    <textarea class="form-control" id="campoMotivos" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    Observações:
+                    <textarea class="form-control" id="campoObservacoes" rows="3"></textarea>
+                </div>
+            </form>
+            <button id="btnIncluirContato" type="button" class="btn btn-primary">Salvar</button>
+        </div>
+
+        <button id="btnCarregaDados" type="button" class="btn btn-primary">Carregar Mais Anotações</button>
+        <div class="row">
+            <a id="a_btn_back" href="Dash_psicologo.html"><button type="button" class="btn btn-primary btn_save" id="btn_back">Retornar</button></a>
+        </div>
+        <div id="tela"></div>
+    </div>
+
+    <script src="../scripts/anotacoes2.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

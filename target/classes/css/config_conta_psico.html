@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurção de conta do psicólogo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="../scripts/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="../css/config_conta_psico.css">
+    <script src="https://kit.fontawesome.com/239b8d0f19.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/sidebar.css">
+</head>
+
+<body>
+    <div id="dash">
+        <section id="sidebar">
+            <section id="sidebar_userpanel">
+                <div id="sidebar_usercontext">
+                    <div id="sidebar_photoframe">
+                        <i class="far fa-user"></i>
+                    </div>
+
+                    <div id="sidebar_textbox">
+                        <p id="sidebar_username">
+                        </p>
+                        <div id="sidebar_userstatus">
+                            <div id="sidebar_statusbar">
+                                <div id="sidebar_statusinfo">
+                                    <i id="sidebar_statusicon" class="fas fa-check-circle"></i>
+                                    <p id="sidebar_statustext">Online</p>
+                                </div>
+                                <i id="sidebar_selectarrow" class="fas fa-angle-down"></i>
+                            </div>
+                            <div id="sidebar_statusmenu">
+                                <ul>
+                                    <li>Online</li>
+                                    <li>Ocupado</li>
+                                    <li>Offline</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p id="sidebar_message">
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <div id="sidebar_line"></div>
+
+            <section id="sidebar_controlbuttons">
+                <a href="#">
+                <button id="sidebar_options" class="sidebar_btn">
+                    <p>Gerenciar Conta</p>
+                </button>
+                </a>
+                <a href="../template/index.html">
+                <button id="sidebar_logout" class="sidebar_btn">
+                    <p>Sair</p>
+                </button>
+                </a>
+            </section>
+
+        </section>
+
+        <!-- Conteúdo -->
+        <section id="content" class="container">
+        <h1 id="title">Gerenciar conta</h1>
+        <div class="row">
+            <div class="col-4">
+                <img src="https://picsum.photos/100" alt="Foto de Perfil">
+
+            </div>
+            <div class="col-8">
+                <div class="row"></div>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-10">
+                            <label for="nome">Nome</label>
+                            <input type="text" name="nome" id="nome" class="form-control" data-toggle="modal"
+                            data-target="#alterar_nome">
+                        </div>
+                        <!-- <div class="col-2">
+                            <button id="btn_alterar" class="btn btn-warning" data-toggle="modal"
+                                data-target="#alterar_nome">Alterar</button>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label for="status"></label>
+                    <input type="text" name="status" id="status" class="form-control" placeholder="Status">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <label for="sobre">Sobre mim</label>
+                <textarea name="sobre" id="sobre" cols="30" rows="10" class="form-control"></textarea>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <label for="sobre">Sobre meu trabalho</label>
+                <textarea name="sobre" id="sobre_job" cols="30" rows="10" class="form-control"></textarea>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-10">
+                        <label for="valor">Valor da consulta</label>
+                        <input type="text" name="valor" id="valor" class="form-control" data-toggle="modal"
+                        data-target="#alterar_valor">
+                    </div>
+                    <!-- <div class="col-2">
+                        <button id="btn_alterar" class="btn btn-warning" data-toggle="modal"
+                            data-target="#alterar_valor">Alterar</button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-10">
+                        <label for="celular">Celular</label>
+                        <input type="text" name="celular" id="celular" class="form-control" data-toggle="modal"
+                        data-target="#alterar_cel">
+                    </div>
+                    <!-- <div class="col-2">
+                        <button id="btn_alterar" class="btn btn-warning" data-toggle="modal"
+                            data-target="#alterar_cel">Alterar</button>
+                    </div> -->
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-10">
+                        <label for="cep">CEP</label>
+                        <input type="text" name="cep" id="cep" class="form-control" data-toggle="modal"
+                        data-target="#alterar_cep">
+                    </div>
+                    <!-- <div class="col-2">
+                        <button id="btn_alterar" class="btn btn-warning" data-toggle="modal"
+                            data-target="#alterar_cep">Alterar</button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-10">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" class="form-control" data-toggle="modal"
+                        data-target="#alterar_email">
+                    </div>
+                    <!-- <div class="col-2">
+                        <button id="btn_alterar" class="btn btn-warning" data-toggle="modal"
+                            data-target="#alterar_email">Alterar</button>
+                    </div> -->
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-10">
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha" id="senha" class="form-control" data-toggle="modal"
+                        data-target="#alterar_senha">
+                    </div>
+                    <!-- <div class="col-2">
+                        <button id="btn_alterar" class="btn btn-warning" data-toggle="modal"
+                            data-target="#alterar_senha">Alterar</button>
+                    </div> -->
+                </div>
+            </div>
+        </div>      
+        </section>
+    </div>
+
+
+    <!----------------------------------------------------------------------------------------- MODAIS ---------------------------------------------------------------------------->
+    <div class="modal fade" id="alterar_nome" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Alterar nome</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <label for="nome_modal">Nome</label>
+                    <input type="text" name="nome_modal" id="nome_modal" class="form-control">
+                    <label for="sobrenome_modal">Sobrenome</label>
+                    <input type="text" name="sobrenome_modal" id="sobrenome_modal" class="form-control">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary btn_save" id="btn_save_nome">Salvar alterações</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="alterar_valor" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Alterar valor da consulta</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="text-info">Escolha uma opção que satisfaz o valor da sua consulta </label>
+                        <select id="valor_modal" name="user_state" class="form-control">
+                            <option value="Gratuito">Gratuito</option>
+                            <option value="Até 50 reais">Até 50 reais</option>
+                            <option value="Até 100 reais">Até 100 reais</option>
+                            <option value="Mais de 100 reais">Mais de 100 reais</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary btn_save" id="btn_save_valor"
+                        data-dismiss="modal">Salvar alterações</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="alterar_cel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Alterar celular</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <label for="celular_modal">Celular</label>
+                    <input type="text" name="celular" id="celular_modal" class="form-control">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary btn_save" id="btn_save_celular">Salvar
+                        alterações</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="alterar_cep" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Alterar CEP</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <label for="cep_modal">CEP</label>
+                    <input type="text" name="cep" id="cep_modal" class="form-control">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary btn_save" id="btn_save_cep"> Salvar alterações</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="alterar_email" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Alterar email</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <label for="email_modal">Email</label>
+                    <input type="text" name="email" id="email_modal" class="form-control">
+                    <label for="email2_modal">Confirmaçao de Email</label>
+                    <input type="text" name="email" id="email2_modal" class="form-control">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary btn_save" id="btn_save_email">Salvar
+                        alterações</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="alterar_senha" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Alterar senha</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <label for="senha_modal">Senha atual</label>
+                    <input type="password" name="senha" id="senha_modal" class="form-control">
+                    <label for="nova_senha_modal">Nova senha</label>
+                    <input type="password" name="senha" id="nova_senha_modal" class="form-control">
+                    <label for="nova_senha2_modal">Confirmação da nova senha</label>
+                    <input type="password" name="senha" id="nova_senha2_modal" class="form-control">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary btn_save" id="btn_save_senha">Salvar
+                        alterações</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../scripts/config_conta_psico.js"></script>
+    <script src="../scripts/sidebar.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

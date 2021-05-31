@@ -1,0 +1,294 @@
+body, img, h1, div, p, section
+{
+    font-family: sans-serif;
+    padding: 0; 
+    margin: 0;
+}
+
+#title-button
+{
+    display: none;
+}
+
+#content
+{
+    position: relative;
+    align-items: center;
+    width: calc(100% - 382px);
+
+    /* background-color: red; */
+}
+
+#chatwindow
+{
+    
+    height: calc(100vh - 80px);
+    max-width: 600px;
+    min-height: 500px;
+
+    background-color: #E4E6EC;
+    
+    margin: 40px auto; 
+    box-sizing: border-box;
+
+    border-radius: 20px;
+}
+
+#chathead
+{
+    height: 120px;
+    width: 100%;
+
+    padding: 20px 60px;
+    box-sizing: border-box;
+
+    display: flex;
+
+    /* background-color: black; */
+}
+
+#card-wrapper
+{       
+    height: 100%;
+    
+    display: flex;
+
+    /* background-color: green; */
+}
+
+#card-photoframe
+{
+    height: 80px;
+    width: 80px;
+
+    padding: 0;
+    margin: 0;
+
+    border-radius: 100%;
+    border-style: none;
+
+    background-color: white;
+}
+
+#cardicon-photoframe
+{
+    position: relative;    
+    color: #1986C0;
+}
+
+#card-friendname
+{
+    height: 1.5rem;
+
+    position: relative;
+    top: 35%;
+    margin-left: 20px;
+    
+
+    transform: translateY(-50%);
+
+    /* background-color: white; */
+    font-size: 1.5rem;
+}
+
+#friend-photo
+{
+    height: 100%;
+    border-radius: 100%;
+    
+}
+
+#message-box
+{
+    height: calc(100% - 120px - 160px - 30px);/*father-size - chathead - writingbox*/
+    width: 100%;
+
+    font-size: 1rem;
+
+    padding-right: 40px;
+    padding-left: 40px;
+
+    overflow-y: scroll;
+
+    background-color: #EFEFEF;
+}
+
+.frndmsg-wrapper
+{
+    width: 60%;
+
+    padding: 20px;
+    margin-bottom: 20px;
+    top: 20px;
+
+    float: left;
+    position: relative;
+
+    text-align: justify;
+
+    border-radius: 12px;
+    background-color: #98cfec;
+}
+
+.frndmsg
+{
+    margin: 0;
+    padding: 0;
+
+}
+
+.time
+{
+    margin: 0;
+    padding: 0;
+
+    font-size: 0.8rem;
+    color: rgb(90, 90, 100);
+
+    text-align: right;
+
+    /* background-color: red; */
+}   
+
+.usrmsg-wrapper
+{
+    width: 60%;
+
+    padding: 20px;
+    margin-bottom: 20px;
+    top: 20px;
+
+    float: right;
+    position: relative;
+
+    text-align: justify;
+
+    border-radius: 12px;
+    background-color: #cdd5da;
+}
+
+.usrmsg
+{
+    margin: 0;
+    padding: 0;
+}
+
+
+#selectuser-box
+{
+    height: 30px;
+
+    display: flex;
+
+    background-color: rgb(199, 199, 199);
+}
+
+#dropdown-wrapper
+{
+
+    width: 50%;
+
+    display: flex;
+    
+    margin: auto;
+    
+    justify-content: space-between;
+
+    /* background-color: red; */
+}
+
+#btn-dropdown
+{
+    height: 30px;
+}
+
+
+#writepanel
+{
+    height: 160px;
+    width: 100%;
+
+    display: flex;
+    box-sizing: border-box;
+    position: relative;
+
+    padding: 20px 40px;
+ 
+    /* background-color: black; */
+}
+
+#btn-sendmsg
+{
+    height: 70px;
+    width: 70px;
+
+    top: 50%;
+    right: 0;
+
+    padding: 0;
+    margin-right: 60px;
+
+    position: absolute;
+
+    transform: translateY(-50%);
+
+    background-color: #1986C0;
+    border-style: none;
+    border-radius: 100%;
+}
+
+#btnicon-sendmsg
+{
+    margin-right: 2px;
+    color: white;
+}
+
+
+#writingbox
+{
+    height: 100%;
+    width: 100%;
+
+    padding-top: 20px;
+    padding-right: 110px;
+    padding-left: 20px;
+
+    border-style: none;
+    border-radius: 20px;
+
+    overflow: scroll;
+    box-sizing: border-box;
+}
+
+#writingbox::-webkit-scrollbar
+{
+    display: none;
+}
+
+
+/* Small */
+@media screen and (max-width: 767px)
+{
+    #content
+    {
+        display: flex;
+        position: relative;
+        align-items: center;
+        width: 100%;
+    }
+
+    #chatwindow
+    {
+        height: 100%;
+        max-width: 720px;
+        min-height: 500px;
+
+        background-color: #E4E6EC;
+        
+        margin: 0; 
+        box-sizing: border-box;
+
+        border-radius: 0;
+        
+    }
+}

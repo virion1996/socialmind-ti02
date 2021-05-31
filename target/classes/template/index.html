@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocialMind</title>
+
+    <link rel="stylesheet" href="../css/styles-index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="../scripts/login.js"></script>
+</head>
+
+<body>
+    <!-- MENU -->
+    <div class="container">
+        <div class="row">
+            <!-- FALTANDO A DIV COL AQUI -->
+            <nav class="navbar  navbar-expand-lg navbar-light bg-light">
+                <!-- LOGO -->
+                <a class="navbar-brand" href="#"><img src="../imagens/logo.png" class="logo"></a>
+
+                <button class="menu-responsivo navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSite">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="menu collapse navbar-collapse" id="navbarSite">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sobre">Sobre o Site</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#parcerias">Parcerias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#avaliacoes">Avaliações</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#nos">Sobre Nós</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contatos">Contatos</a>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                        data-target="#ModalIngressar">Ingressar</button>
+                    <button type="button" class="btn btn-outline-primary" data-toggle="modal"
+                        data-target="#ModalEntrar">
+                        Entrar
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- CORPO DO SITE -->
+    <div class="container">
+
+        <!-- INICIO -->
+        <div class="row inicio">
+            <div class="row col-12 col-md-8"> <!-- ME EXPLICA A EXISTENCIA DESSA CLASS ROW -->
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Um site para conectar pacientes e psicólogos</h3>
+                        <p>A melhor solução para pessoas com pânico social</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row col-6"> <!-- ME EXPLICA A EXISTENCIA DESSA CLASS ROW -->
+                <a href="cadastro-usuario.html" target="_blank" class="ingressar ">
+                    <button type="button" class="btn btn-primary">Ingressar</button>
+                </a>
+            </div>
+        </div>
+            <!-- EM RELAÇAO A ESSA DIV INICIO.. VC NAO PRECISA SEPARAR ELAS DO JEITO Q VC FEZ -->
+            
+        <!-- SOBRE -->
+        <div class="row">
+            <!-- VC TA USANDO ROW DENTRO DE ROW SEM USAR COL ENTRE ELAS.. ISSO EH ERRADO -->
+            <h2 id="sobre" class="titulo-sobre">Sobre o Site</h2>
+            <div class="row sobre">
+                <div class="col-12 col-md-4">
+                    <img src="../imagens/sobre1.jpg" alt="">
+                    <h5>Objetivo.</h5>
+                    <p>O problema que se busca resolver com este projeto é a limitação que certos indivíduos têm de se 
+                        expressar perante outras pessoas e essas limitações podem trazer grandes problemas na vida dos 
+                        afetados.</p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <img src="../imagens/sobre2.jpg" alt="">
+                    <h5>Segurança.</h5>
+                    <p>O SocialMind se preocupa com a sua segurança, apenas profissionais credenciados são aceitos 
+                        havendo assim a seguranças de que todos os seus dados estão sendo protegidos e de estar 
+                        sendo tratado por especialistas.</p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <img src="../imagens/sobre3.jpg" alt="">
+                    <h5>Facilidades.</h5>
+                    <p>Traz a facilidade de encontrar a ajuda perto de você por preços acessíveis além de possibilitar 
+                        um primeiro contato com o psicólogo sem necessariamente sair de casa.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PARCERIAS -->
+        <div class="row parcerias">
+            <div class="row col-12"> <!-- ESSE NEGOCIO DE COLOCAR CLASS ROW E COL NA MESMA DIV TA ERRADO -->
+                <h2 id="parcerias">Parcerias</h2>
+            </div>
+            <!-- PÚBLICO -->
+            <div class="row col-12 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h6>Baixo Custo</h6>
+                        <p>Alguns locais oferecem tratamento com um preço acessível ou com doações, sendo está uma boa opção 
+                            para quem não pode pagar muito.
+                            Central Terapia, Centros universitários (UNA, Pitágoras e PUC)</p>
+                        <p><b>Parceiros:</b></p>
+                        <div class="row logos">
+                            <div class="col-4">
+                                <img src="../imagens/logo1.png">
+                            </div>
+                            <div class="col-4">
+                                <img src="../imagens/logo1.png">
+                            </div>
+                            <div class="col-4">
+                                <img src="../imagens/logo1.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRIVADA -->
+            <div class="row col-12 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h6>Gratuito</h6>
+                        <p>Você pode encontrar atendimento gratuito caso deseje. Essas são algumas instituições que 
+                            oferecem atendimento psicológico gratuito: SUS, CAPS, Centros de Saúde e ONG’s.</p>
+                        <p><b>Parceiros:</b></p>
+                        <div class="row logos">
+                            <div class="col-4">
+                                <img src="../imagens/logo2.png">
+                            </div>
+                            <div class="col-4">
+                                <img src="../imagens/logo2.png">
+                            </div>
+                            <div class="col-4">
+                                <img src="../imagens/logo2.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AVALIAÇÕES -->
+        <div class="row">
+            <div class="col-12">
+                <h2 id="avaliacoes" class="titulo-avaliacao">Avaliações</h2>
+            </div>
+            <!-- ESSE CODIGO AQUI EU DUVIDO MUUUUITO Q EH SEU -->
+            <div class="row avaliacoes">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                    <div class=" card ">
+                        <div class="card-body ">
+                            <div class="imagem-card ">
+                                <img src="../imagens/usuario1.jpg" alt="">
+                            </div>
+                            <div class="texto-card ">
+                                <h5>Alex.F</h5>
+                                <p><b>Alessanda.</b></p>
+                            </div>
+                            <div class="">
+                                <p> O site é simples e intuitivo, e a proposta é muito boa. Até o momento tenho gostado
+                                    muito.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                    <div class=" card ">
+                        <div class="card-body ">
+                            <div class="imagem-card ">
+                                <img src="../imagens/usuario1.jpg" alt="">
+                            </div>
+                            <div class="texto-card ">
+                                <h5>Carl_M</h5>
+                                <p><b>Carlos</b></p>
+                            </div>
+                            <div class="">
+                                <p> Tem me ajudado muito na busca de tratamento.<p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                    <div class=" card ">
+                        <div class="card-body ">
+                            <div class="imagem-card ">
+                                <img src="../imagens/usuario1.jpg" alt="">
+                            </div>
+                            <div class="texto-card ">
+                                <h5>Maria56C</h5>
+                                <p><b>Maria.</b></p>
+                            </div>
+                            <div class="">
+                                <p>O objetivo do site é muito legal, encontrei novos pacientes!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SOBRE E CONTATOS -->
+        <div class="row sobre-contatos">
+            <div class="col-sm-12 col-md-8">
+                <h2 id="nos">Sobre</h2>
+                <!-- SOBRE -->
+                <div class="row sobre-nos">
+                    <div class="col-6">
+                        <p>O SocialMind foi criado por alunos da PUC Minas para a matéria de 
+                            Trabalho Interdisciplinar: Desenvolvimento Web com o intuito de conectar pessoas com 
+                            problema de interação social à psicólogos credenciados, para que estes possam buscar 
+                            ajuda de maneira simples e de acordo com suas preferências.
+                        </p>
+                    </div>
+                    <div class="lista col-6">
+                        <ul>
+                            <li>Professor: Rommel</li>
+                            <li>Andressa Felix</li>
+                            <li>Christian Samuel</li>
+                            <li>Igor Carneiro</li>
+                            <li>Omar Krauss</li>
+                            <li>Yan Rodrigues</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- CONTATOS -->
+            <div class="col-sm-12 col-md-4">
+                <h2 id="nos">Contatos</h2>
+                <h6>Telefone:</h6>
+                <p>(99) 9 9999-9999</p>
+                <h6>E-mail:</h6>
+                <p>example@email.com</p>
+                <h6>Redes Sociais:</h6>
+                <div class="row sociais-img">
+                    <div class="col-4">
+                        <img src="../imagens/facebook.png" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img src="../imagens/instagram.png" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img src="../imagens/twitter.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   <!-- <script src="https://unpkg.com/blip-chat-widget" type="text/javascript">
+	</script>
+	<script>
+    (function () {
+        window.onload = function () {
+            new BlipChat()
+            .withAppKey('c29jaWFsbWluZGFzc2lzdDo4ZDk3YmUzNy0zYjllLTQ3NWMtOTE3My1iMjUwMTAxNGUyM2Q=')
+            .withButton({"color":"#2CC3D5","icon":""})
+            .withCustomCommonUrl('https://chat.blip.ai/')
+            .build();
+        }
+    })();
+	</script>-->
+	
+	<!--<iframe src="https://webchat.botframework.com/embed/socialmind-assist?s=YOUR_SECRET_HERE" style="height: 502px; max-height: 502px;"></iframe> -->
+                                
+
+    <!-- FOOTER -->
+    <div class="container">
+        <div class="row footer">
+            <div class="logo-footer col-sm-1 col-md-3">
+                <img src="../imagens/logo.png" class="logo">
+            </div>
+            <div class="menu-footer col-6 col-sm-8 col-md-5 col-lg-5">
+                <ul>
+                    <li>
+                        <a href="#sobre">Sobre o Site</a>
+                    </li>
+                    <li>
+                        <a href="#parcerias">Parcerias</a>
+                    </li>
+                    <li>
+                        <a href="#avaliacoes">Avaliações</a>
+                    </li>
+                    <li>
+                        <a href="#nos">Sobre Nós</a>
+                    </li>
+                    <li>
+                        <a href="#contatos">Contatos</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sociais-tudo col-6 col-sm-4 col-md-4 col-lg-4">
+                <h6>Nossas Redes:</h6>
+                <div class="row sociais">
+                    <div class=" col-4 col-sm-4 col-md-3 col-lg-4">
+                        <img src="../imagens/facebook.png">
+                    </div>
+                    <div class=" col-4 col-sm-4 col-md-3 col-lg-4">
+                        <img src="../imagens/instagram.png">
+                    </div>
+                    <div class=" col-4 col-sm-4 col-md-3 col-lg-4">
+                        <img src="../imagens/twitter.png">
+                    </div>
+                </div>
+                <h6>Copyright 2020 - Todos Direitos Reservados</h6>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="ModalIngressar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-primary">
+                    <h5 class="modal-title" id="exampleModalLabel">Ingressar</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="../imagens/ingressar.png" alt="">
+                            <a href="../html/cadastro_paciente.html">
+                                <button type="button" class="btn btn-primary btn_ingressar ">Ingressar como
+                                    paciente</button>
+                            </a>
+                            <a href="../html/cadastro_psicologos.html">
+                                <button type="button" class="btn btn-primary btn_ingressar ">Ingressar como
+                                    psicólogo</button>
+                            </a>
+                            <h6><a href="#" class="">Entrar</a></h6>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="ModalEntrar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-primary">
+                    <h5 class="modal-title" id="exampleModalLabel">Ingressar</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="../imagens/ingressar.png" alt="">
+                            <button type="button" class="btn btn-primary btn_ingressar " data-toggle="modal"
+                                data-target="#ModalEntrarPaciente">Ingressar como paciente</button>
+                            <button type="button" class="btn btn-primary btn_ingressar " data-toggle="modal"
+                                data-target="#ModalEntrarPsicologo">Ingressar como psicólogo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <form class="form--register" action="http://localhost:6789/Paciente/logarPaciente" method="post" id="form-add">
+        <div class="modal fade " id="ModalEntrarPaciente" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary">
+                        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="form-group dado_pessoal">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-control" id="emailUser" name="email">
+                                </div>
+                                <div class="form-group dado_pessoal">
+                                    <label for="senha">Senha</label>
+                                    <input type="password" class="form-control" id="passwordUser" name="senha">
+                                </div>
+                                <input type="submit" value="Entrar" class="input--main__style input--button">
+                                <a href="#" class="col-12 col-sm-12 col-md-12 col-lg-12">Esqueceu sua senha?</a><br>
+                                <a href="../html/cadastro_paciente.html"
+                                    class="col-12 col-sm-12 col-md-12 col-lg-12">Criar uma nova conta</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <form class="form--register" action="http://localhost:6789/Paciente/logarPsicologo" method="post" id="form-add">
+        <div class="modal fade " id="ModalEntrarPsicologo" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary">
+                        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="form-group dado_pessoal">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-control" id="emailPsico" name="email">
+                                </div>
+                                <div class="form-group dado_pessoal">
+                                    <label for="senha">Senha</label>
+                                    <input type="password" class="form-control" id="passwordPsico" name="senha">
+                                </div>
+                                <input type="submit" value="Entrar" class="input--main__style input--button">
+                                <a href="#" class="col-12 col-sm-12 col-md-12 col-lg-12">Esqueceu sua senha?</a><br>
+                                <a href="../html/cadastro_psicologos.html"
+                                    class="col-12 col-sm-12 col-md-12 col-lg-12">Criar uma nova conta</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script>
+
+        // Declara uma função para processar o formulário de login
+        function processaFormLogin(event) {
+            // Cancela a submissão do formulário para tratar sem fazer refresh da tela
+            event.preventDefault();
+
+            // Obtem os dados de login e senha a partir do formulário de login
+            var email = document.getElementById('emailUser').value;
+            var password = document.getElementById('passwordUser').value;
+
+            // Valida login e se estiver ok, redireciona para tela inicial da aplicação
+            resultadoLogin = loginUser(email, password)
+            if (resultadoLogin) {
+                window.location.href = '../html/Dash_paciente.html';
+            }
+            else { // Se login falhou, avisa ao usuário
+                alert('Usuário ou senha incorretos');
+            }
+        }
+
+        // Associa a funçao processaFormLogin  formulário adicionado um manipulador do evento submit
+        document.getElementById('login-user').addEventListener('submit', processaFormLogin);
+
+        function processaFormLoginPsico(event) {
+            // Cancela a submissão do formulário para tratar sem fazer refresh da tela
+            event.preventDefault();
+
+
+
+            // Obtem os dados de login e senha a partir do formulário de login
+            var email_psico = document.getElementById('emailPsico').value;
+            var password_psico = document.getElementById('passwordPsico').value;
+
+
+
+            // Valida login e se estiver ok, redireciona para tela inicial da aplicação
+
+            resultadoLogin = loginPsico(email_psico, password_psico);
+            if (resultadoLogin) {
+                window.location.href = '../html/Dash_psicologo.html';
+            }
+            else { // Se login falhou, avisa ao usuário
+                alert('Usuário ou senha incorretos');
+            }
+        }
+
+        // Associa a funçao processaFormLoginPsico  formulário adicionado um manipulador do evento submit
+        document.getElementById('login-psico').addEventListener('submit', processaFormLoginPsico);
+    </script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/aaa853252b.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

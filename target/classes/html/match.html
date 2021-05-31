@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Match</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="Projetos do Christian" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../css/match.css" />
+  <meta name="Autor" content="Christian" />
+  <script src="../scripts/match.js">
+  </script>
+
+  <script src="https://kit.fontawesome.com/dd6b633eba.js" crossorigin="anonymous"></script>
+
+  <script>
+    //------SETA INFORMACOES INICIAIS SOBRE OS PSICOS RECOMENDADOS------
+    onload = () => {
+      conexoes();
+      var pendentes = ['li1', 'li2', 'li3'];
+      // let num = varPendente();
+      document.getElementById('usuario').innerText = Usuario();
+
+      conx1.onclick = () =>{
+        IgorTeAmoS2(1);
+      }
+      conx2.onclick = () =>{
+        IgorTeAmoS2(1);
+      }
+      conx3.onclick = () =>{
+        IgorTeAmoS2(1);
+      }
+
+      bt1.onclick = () => {
+        let num = varPendente(0);
+        document.getElementById(pendentes[num]).innerText = psicosN(1);
+        document.getElementById(0).innerHTML = "Aguarde para novas sugestões";
+        document.getElementById(3).innerHTML = "";
+        document.getElementById('bot1').innerHTML = "";
+      }
+
+      bt2.onclick = () => {
+        let num = varPendente(1);
+        document.getElementById(pendentes[num]).innerText = psicosN(2);
+        document.getElementById(1).innerText = "Aguarde para novas sugestões";
+        document.getElementById(4).innerText = "";
+        document.getElementById('bot2').innerHTML = ` `;
+      }
+
+      bt3.onclick = () => {
+        let num = varPendente(2);
+        document.getElementById(pendentes[num]).innerText = psicosN(3);
+        document.getElementById(2).innerText = "Aguarde para novas sugestões";
+        document.getElementById(5).innerText = "";
+        document.getElementById('bot3').innerText = ` `;
+      }
+    }
+
+  </script>
+
+</head>
+
+<body>
+  <header class="container header">
+  </header>
+
+  <main class="container main">
+
+    <div class="row">
+
+      <div class="card box col-sm-12 col-lg-6" style="align-items: center;">
+        <h3 id="usuario">#usuario</h3>
+        <div class="card" style="width: 18rem; display: inline;">
+          <div class="card-header">
+            Suas conexões
+          </div>
+          <ul class="list-group list-group-flush">
+            <li id="conx1" class="list-group-item"></li>
+            <li id="conx2" class="list-group-item"></li>
+            <li id="conx3" class="list-group-item"></li>
+          </ul>
+        </div>
+
+        <div class="card " style="width: 18rem; display: inline;">
+          <div class="card-header">
+            Solicitações pendentes
+          </div>
+          <ul class="list-group list-group-flush">
+            <li id="li1" class="list-group-item"></li>
+            <li id="li3" class="list-group-item"></li>
+            <li id="li2" class="list-group-item"></li>
+          </ul>
+        </div>
+        <div class="row">
+          <a id="a_btn_back" href="Dash_paciente.html"><button type="button" class="btn btn-primary btn_save" id="btn_back">Retornar</button></a>
+      </div>
+      </div>
+
+      <div class="card box col-sm-12 col-lg-6" style="align-items: center;">
+        <h3>Psicologos</h3>
+        <div class="card col-12" style="width: 18rem; display: inline; max-height: 30%;">
+          <div class="card-body">
+            <h5 class="card-title" id="0">No momento você não possui sugestões</h5>
+            <p class="card-text" id="3"></p>
+            <div id="bot1">
+              <a id="bt1" class="btn btn-secondary">Match</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card col-12" style="width: 18rem; display: inline; max-height: 30%;">
+          <div class="card-body">
+            <h5 class="card-title" id="1">No momento você não possui sugestões</h5>
+            <p class="card-text" id="4"></p>
+            <div id="bot2">
+              <a id="bt2" class="btn btn-secondary">Match</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card col-12" style="width: 18rem; display: inline; max-height: 30%;">
+          <div class="card-body">
+            <h5 class="card-title" id="2">No momento você não possui sugestões</h5>
+            <p class="card-text" id="5"></p>
+            <div id="bot3">
+              <a id="bt3" class="btn btn-secondary">Match</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="container footer">
+    <p>Copyright 2020- - <b>ICEI PUC Minas</b></p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,236 @@
+.sobre {
+    position: relative;
+  }
+  
+  #imagem {
+    position: absolute;
+    width: 100%;
+  }
+  
+  #texto {
+    position: absolute;
+    font-size: 32px;
+    left: 250px;
+    top: 135px;
+  }
+
+  img{
+      width: 100%;
+      display: block;
+  }
+
+  .sobre img{
+    width: 70px; 
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    margin-left: 90px;
+}
+.avaliacoes img{ 
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+}
+
+.avaliacoes{
+    background-color: dimgray;
+}
+
+
+.logos {
+    display: flex;
+    width: 380px;
+}
+
+
+
+.footer{
+    background-color:dimgray;
+    padding: 20px;
+}
+
+
+.footer li{
+    list-style-type: none;
+}
+
+section a{
+    color: white;
+}
+
+.footer ul{
+    padding: 20px;
+    margin-right: 100px;
+}
+.sociais{
+    display: flex;
+    width: 150px;
+}
+
+section .footer h6{
+    color: white;
+    padding: 20px;
+}
+
+section nav{
+    background-color: dimgray;
+}
+
+nav .menu{
+    text-align: center;
+}
+
+nav .menu-responsivo{
+    margin-right: 20px;
+}
+
+.sobre {
+    background-color: lightgrey;
+    padding: 40px;
+}
+
+.titulo-sobre{
+    margin-top: 100px;
+}
+
+section .card{
+    border-radius: 20px;
+    background-color: gainsboro;
+}
+
+.parcerias{
+    margin-top: 100px;
+}
+
+section .imagem-card{
+    float: left;
+}
+
+.texto-card{
+    
+    margin-left: 30%;
+}
+
+.avaliacoes{
+    padding: 30px;
+}
+
+.titulo-avaliacao{
+    margin-top: 100px;
+}
+
+.lista img{
+    width: 28px;
+    height: 28px;
+}
+
+.lista ul{
+    list-style-image: url('../imagens/aluno.png');
+}
+
+
+
+.inicio{
+    background-color: dimgray;
+    padding: 150px;
+}
+
+.ingressar{
+    margin-top: 20px;
+}
+
+.inicio .card{
+    background-color: #4F4F4F;
+}
+
+ .inicio p,h3{
+    color: white;
+}
+
+.modal .card{
+    border-radius: 20px;
+    background-color: gainsboro;
+    text-align: center;
+}
+.modal img{
+    width: 70px; 
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    margin: 0 auto 20px;
+}
+
+.modal h5{
+    color: white;
+}
+
+.modal a{
+    margin-top: 20px;
+    color: black;
+    padding: 20px;
+}
+.modal button{
+    margin-bottom: 20px;
+}
+
+.btn_ingressar{
+    margin-left: 5%;
+    width: 70%;
+}
+
+.modal h6{
+    margin: 0 auto;
+}
+
+.imagem-card {
+    width: 64px;
+    height: 64px;
+}
+
+.sociais-img img{
+    width: 56px;
+    height: 56px;
+}
+
+.sobre-nos{
+    background-color: lightgray;
+    padding: 20px;
+    border-radius: 3%;
+}
+
+.sobre-contatos{
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.logo{
+    width: 40%;
+}
+
+#logonav{
+    width: 60px;
+}
+
+
+@media screen and (max-width: 767px){
+        .logo-footer{
+            display: none;
+        }
+        .logos {
+            display: flex;
+            width: 280px;
+        }
+        .inicio{
+            margin-top: 5%;
+            padding: 50px;
+        }
+        .card{
+            margin-bottom: 20px;
+        }
+        .imagem-card{
+            margin-bottom: 40px;
+        }
+        .logo{
+            width: 70%;
+        }
+}

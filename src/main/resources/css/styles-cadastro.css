@@ -1,0 +1,108 @@
+.botoes button{
+    margin-left: 300px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+img{
+    width: 100%;
+    display: block;
+}
+
+.footer{
+    background-color:dimgray;
+    padding: 20px;
+}
+
+.footer .logo{
+    width: 100px;
+}
+
+li{
+    list-style-type: none;
+}
+
+.footer a{
+    color: white;
+}
+
+section ul{
+    padding: 20px;
+    margin-right: 100px;
+}
+.sociais{
+    display: flex;
+    width: 150px;
+}
+
+section h6{
+    color: white;
+    padding: 20px;
+}
+
+nav{
+    background-color: cornflowerblue;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+section h1{
+    color: white;
+}
+
+label{
+    font-weight: bold;
+}
+
+section form{
+    margin-top: 40px;
+}
+
+.esquerda{
+    float: left;
+}
+
+.direita{
+    float: right;
+}
+
+form img{
+    width: 70px; 
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%
+}
+
+form a{
+    color: #000;
+}
+.foto{
+    margin-left: 485px;
+
+}
+.usuario{
+    padding: 15px;
+    text-align: center;
+}
+
+form .card{
+    border-radius: 20px;
+    background-color: gainsboro;
+}
+
+@media screen and (max-width: 767px){
+    .logo-footer{
+        display: none;
+    }
+    .logos {
+        display: flex;
+        width: 280px;
+    }
+    .foto{
+        margin-left: 100px;
+    }
+    .botoes button{
+        margin-left: 100px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
